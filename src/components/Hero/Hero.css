@@ -1,0 +1,29 @@
+.hero{
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero-title{
+    font-size: var(--fs-title);
+    font-weight: var(--fw-light);
+    color: var(--clr-highlight1);
+    margin: 1em 0em;
+}
+
+.hero-title > b{
+    color: var(--clr-dark);
+}
+
+.hero-dog{
+    margin-top: 2em;
+    width: 24em;
+}
+
+.hero-link{
+    color: var(--clr-highlight2);
+}
