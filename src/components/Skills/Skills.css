@@ -1,0 +1,19 @@
+.skills{
+    padding: 2em 17em;
+    height: 10em;
+    width: 100%;
+    background-color: var(--clr-highlight1);
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.skills-skill{
+    display: block;
+}
