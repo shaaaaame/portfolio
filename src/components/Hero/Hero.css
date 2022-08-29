@@ -24,6 +24,10 @@
     width: 24em;
 }
 
+.hero-dog:hover{
+    cursor: pointer;
+}
+
 .hero-link{
     color: var(--clr-highlight2);
 }
