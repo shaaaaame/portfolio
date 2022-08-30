@@ -1,20 +1,27 @@
 .intro{
     width: 100%;
-    padding: 10rem 25rem;
+    height: 50vh;
+    margin: 25vh 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .intro-tab{
-    width: 30rem;
+    height: 100%;
+    object-fit: contain;
+    margin: 0 2rem;
 }
 
 .intro-container{
-    width: 30rem;
+    width: 20vw;
+    margin: 0 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .intro-title{
-    margin: 5rem 0;
     color: var(--clr-highlight1);
 }
 
@@ -26,3 +33,16 @@
     color: var(--clr-highlight2);
 }
 
+@media screen and (max-width: 768px) {
+    .intro-container{
+        padding: 10rem 0;
+    }
+
+    .intro-tab{
+        display: none;
+    }
+
+    .intro-container{
+        width: 90%;
+    }
+}

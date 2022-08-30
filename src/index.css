@@ -5,6 +5,7 @@
 
   --fs-body: 20px;
   --fs-title: 60px;
+  --fs-h2: 40px;
   --fs-h3: 20px;
 
   --fw-light: 300;
@@ -18,19 +19,51 @@
   --clr-highlight2: #a69aca;
 }
 
+@media screen and (max-width: 480px) {
+  :root{
+    --fs-body: 15px;
+    --fs-title: 30px;
+    --fs-h2: 23px;
+    --fs-h3: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  :root{
+    --fs-body: 15px;
+    --fs-title: 35px;
+    --fs-h2: 25px;
+  }
+}
+
+@media screen and (min-width: 769) {
+  :root{
+    
+  }
+}
+
 *{
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  font-size: var(--fs-body);
+}
+
+p{
+  font-size: var(--fs-body);
 }
 
 h1{
-  font-size: var(--fs-title)
+  font-size: var(--fs-title);
+}
+
+h2{
+  font-size: var(--fs-h2);
 }
 
 h3{
-  font-size: var(--fs-h3)
+  font-size: var(--fs-h3);
 }
 
 a{
@@ -43,6 +76,7 @@ body{
   font-weight: var(--fw-regular);
   font-size: var(--fs-body);
   color: var(--clr-dark);
+  background-color: var(--clr-light);
 }
 
 ul{

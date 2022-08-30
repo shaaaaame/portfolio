@@ -10,7 +10,6 @@
 }
 
 .hero-title{
-    font-size: var(--fs-title);
     font-weight: var(--fw-light);
     color: var(--clr-highlight1);
     margin: 1em 0em;
@@ -18,10 +17,12 @@
 
 .hero-title > b{
     color: var(--clr-dark);
+    font-size: var(--fs-title);
 }
 
 .hero-dog{
-    width: 24em;
+    width: 24rem;
+    object-fit: cover;
 }
 
 .hero-dog:hover{
@@ -34,4 +35,10 @@
 
 .hero-link:hover{
     cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .hero-dog{
+        width: 15rem;
+    }
 }

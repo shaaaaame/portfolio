@@ -5,7 +5,7 @@ function Skills() {
   function importAll(r) {
     let images = [];
     r.keys().map((item) => { images.push(
-    <li className='skills-skill'><img src={r(item)} alt="skill" /></li>
+    <li><img className='skills-skill' src={r(item)} alt="skill" /></li>
     ); });
     return images;
   }

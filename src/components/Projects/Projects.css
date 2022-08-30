@@ -1,48 +1,53 @@
-.project{
-    width: 100%;
-    height: 110vh;
-    align-items: center;
-    justify-content: center;
+.projects{
+    padding-top: 5rem;
     position: relative;
+}
+
+.project{
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .project-img{
     position: absolute;
-    height: 30rem;
-    width: 40rem;
+    height: 60%;
+    width: 50%;
     z-index: 0;
+    object-fit: cover;
 }
 
 .project-img-right{
-    left: 20%;
-    top: 15%;
+    left: 15vw;
+    top: 0;
 }
 
 .project-img-left{
-    right: 20%;
-    top: 30%;
+    right: 15vw;
+    top: 15%;
 }
 
 /* for tab and body */
 .project-body{
     position: absolute;
     z-index: 1;
-    height: 30rem;
-    width: auto;
+    width: 30em;
 }
 
 .project-body-right{
-    right: 20%;
+    right: 15vw;
     top: 30%;
 }
 
 .project-body-left{
-    left: 20%;
-    top: 15%;
+    left: 15vw;
+    top: 0;
 }
 
 .project-body-tab{
-    height: 100%;
+    width: 100%;
 }
 
 .project-body-container{
@@ -58,5 +63,61 @@
     line-height: 1.5;
     display: inline-block;
     vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+    .project{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-img{
+        height: 90%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .project-img-right{
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .project-img-left{
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+
+
+    /* body */
+    .project-body{
+        width: 100vw;
+        height: auto;
+        object-fit:unset;
+        align-items: center;
+    }
+
+    .project-body-right{
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+    
+    .project-body-left{
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .project-body-tab{
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    .project-body-container{
+        top: 0;
+    }
 }
 

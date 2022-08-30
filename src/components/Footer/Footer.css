@@ -1,11 +1,18 @@
 .footer{
-    width: 100%;
+    width: 100vw;
     height: 7rem;
-    padding: 3rem;
+    padding: 5vw;
     background-color: var(--clr-highlight1);
+    position: relative;
 }
 
 .footer-credit{
+    position: absolute;
+    top: 50%;
+    right: 5vw;
+    transform: translateY(-50%);
+    width: 40%;
     float: right;
     color: var(--clr-light);
+    text-align: right;
 }

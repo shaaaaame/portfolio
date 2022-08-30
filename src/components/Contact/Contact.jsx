@@ -7,8 +7,8 @@ import linkedIn from '../../assets/linkedin.svg';
 function Contact() {
   return (
     <div className='contact'>
-        <h2 className='contact-title'>let's work together :{")"}</h2>
-        <h1 className='contact-email'><a href="">hanxheng@gmail.com</a></h1>
+        <h3 className='contact-title'>let's work together :{")"}</h3>
+        <a href=""><h2 className='contact-email'>hanxheng@gmail.com</h2></a>
         <div className='contact-divider'></div>
         <div className='contact-container'>
             <img className='contact-logo' src={linkedIn} alt="linkedin"/>
