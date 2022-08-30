@@ -1,0 +1,28 @@
+.intro{
+    width: 100%;
+    padding: 10rem 25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro-tab{
+    width: 30rem;
+}
+
+.intro-container{
+    width: 30rem;
+}
+
+.intro-title{
+    margin: 5rem 0;
+    color: var(--clr-highlight1);
+}
+
+.intro-body{
+    margin: 3rem 0;
+}
+
+.intro-link{
+    color: var(--clr-highlight2);
+}
+
