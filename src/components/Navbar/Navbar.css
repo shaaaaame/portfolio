@@ -7,6 +7,9 @@
     align-items: center;
     position: fixed;
     z-index: 3;
+    
+    opacity: 0%;
+    animation: 1s ease-out 0.5s 1 fade-slideUp forwards;
 }
 
 .nav-list{

@@ -2,3 +2,66 @@
   height: 100vh;
   background-color: var(--clr-light);
 }
+
+.fade-slideUp{
+  opacity: 0%;
+  animation: 1s ease-out 0.5s fade-slideUp forwards;
+}
+
+.fade-fromLeft{
+  opacity: 0%;
+  animation: 1s ease-out 0.5s fade-fromLeft forwards;
+}
+
+.fade-fromRight{
+  opacity: 0%;
+  animation: 1s ease-out 0.5s fade-fromRight forwards;
+}
+
+/* animations */
+
+@keyframes fade-slideUp{
+  0% {
+      opacity: 0%;
+      transform: translateY(30px);
+  }
+
+  100%{
+      opacity: 100%;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fade-fromLeft {
+  0%{
+    opacity: 0%;
+    transform: translateX(-50px);
+  }
+
+  100%{
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-fromRight {
+  0%{
+    opacity: 0%;
+    transform: translateX(50px);
+  }
+
+  100%{
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes extend{
+  0%{
+    width: 0%;
+  }
+
+  100%{
+    width: 100%;
+  }
+}

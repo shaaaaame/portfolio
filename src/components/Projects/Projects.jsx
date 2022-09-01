@@ -1,19 +1,32 @@
-import { React, useEffect, useState } from 'react';
-
+import { React, useEffect, useState, useRef} from 'react';
 import tab_horizontal from '../../assets/tab-horizontal.png';
 import tab_vertical from '../../assets/tab-vertical.png';
 import placeholder from '../../assets/placeholder.png';
-
+import  {useIsVisible } from 'react-is-visible';
+import classNames from 'classnames';
 import './Projects.css';
-import { get } from 'react-scroll/modules/mixins/scroller';
+
+
 
 
 function ProjectRight(props){
 
+    const ref = useRef();
+    const isVisible = useIsVisible(ref, {once: true});
+    var imgClass = classNames(
+        'project-img project-img-right',
+        {'fade-fromLeft' : isVisible}
+    )
+
+    var bodyClass = classNames(
+        'project-body project-body-right',
+        {'fade-fromRight' : isVisible}
+    )
+
     return(
-        <div className='project'>
-            <img className='project-img project-img-right' src={props.src} alt="project image"/>
-            <div className='project-body project-body-right'>
+        <div className='project' ref={ref}>
+            <img className={imgClass} src={props.src} alt="project image"/>
+            <div className={bodyClass}>
                 <img className="project-body-tab" src={tab_horizontal} alt="tab"/>
                 <div className='project-body-container'>
                     <p className='project-body-text'>{props.text}</p>
@@ -24,11 +37,22 @@ function ProjectRight(props){
 }
 
 function ProjectLeft(props){
+    const ref = useRef();
+    const isVisible = useIsVisible(ref, {once: true});
+    var imgClass = classNames(
+        'project-img project-img-left',
+        {'fade-fromRight' : isVisible}
+    )
+
+    var bodyClass = classNames(
+        'project-body project-body-left',
+        {'fade-fromLeft' : isVisible}
+    )
 
     return(
-        <div className='project'>
-            <img className='project-img project-img-left' src={props.src} alt="project image"/>
-            <div className='project-body project-body-left'>
+        <div className='project' ref={ref}>
+            <img className={imgClass} src={props.src} alt="project image"/>
+            <div className={bodyClass}>
                 <img className="project-body-tab" src={tab_horizontal} alt="tab"/>
                 <div className='project-body-container'>
                     <p className='project-body-text'>{props.text}</p>

@@ -33,3 +33,28 @@
     height: 4rem;
     line-height: 3.5rem;
 }
+
+.fade1{
+    opacity: 0%;
+    animation: 1s ease-out 0.5s fade-slideUp forwards;
+}
+
+.fade2{
+    opacity: 0%;
+    animation: 1s ease-out 0.65s fade-slideUp forwards;
+}
+
+.fade3{
+    opacity: 0%;
+    animation: 1s ease-out 0.8s fade-slideUp forwards;
+}
+
+.fade4{
+    opacity: 0%;
+    animation: 1s ease-out 0.95s fade-slideUp forwards;
+}
+
+.extend{
+    width: 0%;
+    animation: 1.5s ease-in-out 0.7s extend forwards;
+}
