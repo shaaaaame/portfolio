@@ -36,11 +36,6 @@
   }
 }
 
-@media screen and (min-width: 769) {
-  :root{
-    
-  }
-}
 
 *{
   margin: 0;
@@ -48,6 +43,10 @@
   border: 0;
   box-sizing: border-box;
   font-size: var(--fs-body);
+}
+
+body{
+  overflow: overlay;
 }
 
 p{
@@ -86,4 +85,14 @@ ul{
 
 img{
   -webkit-tap-highlight-color: transparent;
+}
+
+/* scrollbar style */
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-highlight2);
 }
