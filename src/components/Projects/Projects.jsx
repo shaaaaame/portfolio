@@ -1,9 +1,11 @@
-import React from 'react';
+import { React, useEffect, useState } from 'react';
 
-import tab from '../../assets/tab.png';
+import tab_horizontal from '../../assets/tab-horizontal.png';
+import tab_vertical from '../../assets/tab-vertical.png';
 import placeholder from '../../assets/placeholder.png';
 
 import './Projects.css';
+import { get } from 'react-scroll/modules/mixins/scroller';
 
 
 function ProjectRight(props){
@@ -12,7 +14,7 @@ function ProjectRight(props){
         <div className='project'>
             <img className='project-img project-img-right' src={props.src} alt="project image"/>
             <div className='project-body project-body-right'>
-                <img className="project-body-tab" src={tab} alt="tab"/>
+                <img className="project-body-tab" src={tab_horizontal} alt="tab"/>
                 <div className='project-body-container'>
                     <p className='project-body-text'>{props.text}</p>
                 </div>
@@ -27,7 +29,7 @@ function ProjectLeft(props){
         <div className='project'>
             <img className='project-img project-img-left' src={props.src} alt="project image"/>
             <div className='project-body project-body-left'>
-                <img className="project-body-tab" src={tab} alt="tab"/>
+                <img className="project-body-tab" src={tab_horizontal} alt="tab"/>
                 <div className='project-body-container'>
                     <p className='project-body-text'>{props.text}</p>
                 </div>
@@ -36,14 +38,59 @@ function ProjectLeft(props){
     )
 }
 
+function ProjectVertical(props){
+    return(
+        <div className='project-vertical'>
+            <div className='project-vertical-container'>
+                <img className='project-vertical-tab' src={tab_vertical} alt='project vertical tab'/>
+                <h3 className='project-vertical-title'>{props.title}</h3>
+                <img className='project-vertical-img' src={props.src} alt='project img'/>
+                <p className='project-vertical-text'>{props.text}</p>
+            </div>
+        </div>
+    )
+}
+
 function Projects() {
-  return (
-    <div className='projects'>
-        <ProjectRight src={placeholder} text="no projects yet..."/>
-        <ProjectLeft src={placeholder} text="no projects yet..."/>
-        <ProjectRight src={placeholder} text="no projects yet..."/>
-    </div>
-  )
+    const [isMobile, setIsMobile] = useState(false);
+
+    function getWidth() {
+        var maxWidth = Math.max(
+              document.body.scrollWidth,
+              document.documentElement.scrollWidth,
+              document.body.offsetWidth,
+              document.documentElement.offsetWidth,
+              document.documentElement.clientWidth
+         );
+         if(maxWidth <= 768){
+             setIsMobile(true);
+         }else
+         {
+            setIsMobile(false);
+         }
+         return maxWidth;
+    }
+    
+    window.addEventListener("resize", getWidth);
+    useEffect(() => {getWidth()});
+
+    return (
+        <>
+            {isMobile ? 
+            <div className='projects'>
+                <ProjectVertical src={placeholder} title="project1" text="no projects yet..."/>
+                <ProjectVertical src={placeholder} title="project2" text="no projects yet..."/>
+                <ProjectVertical src={placeholder} title="project3" text="no projects yet..."/>
+            </div>
+            :
+            <div className='projects'>
+                <ProjectRight src={placeholder} text="no projects yet..."/>
+                <ProjectLeft src={placeholder} text="no projects yet..."/>
+                <ProjectRight src={placeholder} text="no projects yet..."/>
+            </div>        
+            }
+        </>   
+    )
 }
 
 export default Projects

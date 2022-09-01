@@ -1,9 +1,13 @@
 import './Navbar.css';
-import React from 'react'
+import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-scroll';
 import menuIcon from '../../assets/menu.svg';
+import closeIcon from '../../assets/close.svg';
 
 function Navbar() {
+  const [isMenubarActive, setIsMenubarActive] = useState(false);
+
   return (
     <nav className='nav'>
         <a href="#" className='nav-name'>hanxhengchew</a>
@@ -13,7 +17,21 @@ function Navbar() {
             <li className='nav-item'><Link to='contact' smooth={true} duration={1000}>contact</Link></li>{/* add add href */}
         </ul>
         <div className='nav-menu'>
-          <img className='nav-menu-icon' src={menuIcon} alt='menu'/>
+          <img onClick={() => setIsMenubarActive(true)} className='nav-menu-icon' src={menuIcon} alt='menu'/>
+
+          {isMenubarActive ? 
+          <div className='nav-menubar'>
+            <img onClick={() => setIsMenubarActive(false)} className='nav-menubar-close' src={closeIcon} alt='close'/>
+            <ul className='nav-menubar-list'>
+              <li className='nav-menubar-item' onClick={() => setIsMenubarActive(false)}><h2><a>about</a></h2></li>{/* add add href */}
+              <li className='nav-menubar-item'><h2><Link to='projects' smooth={true} duration={1000} onClick={() => setIsMenubarActive(false)}>projects</Link></h2></li>
+              <li className='nav-menubar-item'><h2><Link to='contact' smooth={true} duration={1000} onClick={() => setIsMenubarActive(false)}>contact</Link></h2></li>
+            </ul>
+          </div>
+          :
+          <></>
+          }
+
         </div>  
     </nav>
   )

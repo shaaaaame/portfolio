@@ -23,6 +23,7 @@
 .hero-dog{
     width: 24rem;
     object-fit: cover;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .hero-dog:hover{

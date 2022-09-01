@@ -81,7 +81,8 @@
     right: auto;
 }
 
-/* menu button on small devices */
+
+/*small devices */
 @media screen and (max-width: 768px) {
     .nav-menu{
         display: inline;
@@ -90,4 +91,35 @@
     .nav-list{
         display: none;
     }
+}
+
+
+/* menu bar */
+
+.nav-menubar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--clr-highlight1);
+    padding: 5vw;
+    z-index: 5;
+    display: block;
+}
+
+.nav-menubar-close{
+    width: 2rem;
+    float: right;
+}
+
+.nav-menubar-list{
+    margin-top: 5rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menubar-item{
+    margin: 2em 0;
 }
