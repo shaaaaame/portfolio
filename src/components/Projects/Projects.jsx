@@ -27,6 +27,7 @@ function ProjectRight(props){
         <div className='project' ref={ref}>
             <img className={imgClass} src={props.src} alt="project image"/>
             <div className={bodyClass}>
+                <h3 className='project-body-title'>project</h3>
                 <img className="project-body-tab" src={tab_horizontal} alt="tab"/>
                 <div className='project-body-container'>
                     <p className='project-body-text'>{props.text}</p>
@@ -53,6 +54,7 @@ function ProjectLeft(props){
         <div className='project' ref={ref}>
             <img className={imgClass} src={props.src} alt="project image"/>
             <div className={bodyClass}>
+                <h3 className='project-body-title'>project</h3>
                 <img className="project-body-tab" src={tab_horizontal} alt="tab"/>
                 <div className='project-body-container'>
                     <p className='project-body-text'>{props.text}</p>
@@ -63,9 +65,16 @@ function ProjectLeft(props){
 }
 
 function ProjectVertical(props){
+    const ref = useRef();
+    const isVisible = useIsVisible(ref, {once: true});
+    var bodyClass = classNames(
+        'project-vertical-container',
+        {'fade-slideUp' : isVisible}
+    )
+
     return(
         <div className='project-vertical'>
-            <div className='project-vertical-container'>
+            <div className={bodyClass} ref={ref}>
                 <img className='project-vertical-tab' src={tab_vertical} alt='project vertical tab'/>
                 <h3 className='project-vertical-title'>{props.title}</h3>
                 <img className='project-vertical-img' src={props.src} alt='project img'/>

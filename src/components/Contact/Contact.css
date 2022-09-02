@@ -4,12 +4,14 @@
 }
 
 .contact-title{
-    color: var(--clr-highlight1)
+    color: var(--clr-highlight1);
+    opacity: 0%;
 }
 
 .contact-email{
     margin: 5rem 0;
     color: var(--clr-highlight2);
+    opacity: 0%;
 }
 
 .contact-divider{
@@ -21,6 +23,7 @@
 .contact-container{
     display: flex;
     margin: 2rem 0;
+    opacity: 0%;
 }
 
 .contact-logo{
@@ -36,25 +39,25 @@
 
 .fade1{
     opacity: 0%;
-    animation: 1s ease-out 0.5s fade-slideUp forwards;
+    animation: 1s ease-out 0.5s fade-fromLeft forwards;
 }
 
 .fade2{
     opacity: 0%;
-    animation: 1s ease-out 0.65s fade-slideUp forwards;
+    animation: 1s ease-out 0.65s fade-fromLeft forwards;
 }
 
 .fade3{
     opacity: 0%;
-    animation: 1s ease-out 0.8s fade-slideUp forwards;
+    animation: 1s ease-out 0.8s fade-fromLeft forwards;
 }
 
 .fade4{
     opacity: 0%;
-    animation: 1s ease-out 0.95s fade-slideUp forwards;
+    animation: 1s ease-out 0.95s fade-fromLeft forwards;
 }
 
 .extend{
     width: 0%;
-    animation: 1.5s ease-in-out 0.7s extend forwards;
+    animation: 1.5s ease-in-out 0.7s extend forwards, 1.5s ease-in-out 0.7s fade-fromLeft forwards;
 }

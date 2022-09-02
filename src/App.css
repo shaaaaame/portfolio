@@ -65,3 +65,13 @@
     width: 100%;
   }
 }
+
+@keyframes slideUp {
+  0%{
+    top: 100vh;
+  }
+
+  100%{
+    top: 0;
+  }
+}

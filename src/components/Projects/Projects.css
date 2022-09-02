@@ -67,6 +67,12 @@
     vertical-align: middle;
 }
 
+.project-body-title{
+    position: absolute;
+    left: 3%;
+    top: 4%;
+}
+
 /* vertical tabs on small devices */
 .project-vertical{
     width: 100vw;
@@ -79,6 +85,7 @@
     position: relative;
     left: 0;
     overflow: hidden;
+    opacity: 0%;
 }
 
 .project-vertical-tab{

@@ -21,8 +21,8 @@ function Intro() {
 
   return (
     <div className='intro' >
-        <img className={imgClass} src={intro} alt="me" ref={ref}/>
-        <div className={bodyClass}>
+        <img className={imgClass} src={intro} alt="me" />
+        <div className={bodyClass} ref={ref}>
             <h1 className='intro-title'>hey!</h1>
             <p className='intro-body'>i’m han xheng from malaysia, currently studying computer science and economics at the university of toronto, canada.</p>
             <div className='intro-links'>

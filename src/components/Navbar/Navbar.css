@@ -98,6 +98,35 @@
 
 
 /* menu bar */
+.nav-menu-anim-enter{
+    margin-top: 100vh;
+}
+
+.nav-menu-anim-enter-active{
+    margin-top: 0;
+    transition: margin-top 300ms ease-in-out;
+}
+
+.nav-menu-anim-exit{
+    margin-top: 0;
+}
+
+.nav-menu-anim-exit-active{
+    margin-top: 100vh;
+    transition: margin-top 300ms ease-in-out;
+}
+
+.nav-menu-items-anim-enter{
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.nav-menu-items-anim-enter-active{
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 500ms ease-out, transform 500ms ease-out;
+    transition-delay: 200ms;
+}
 
 .nav-menubar{
     position: fixed;
