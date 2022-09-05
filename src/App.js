@@ -1,4 +1,6 @@
-import { Link, Element} from 'react-scroll'
+import { Element} from 'react-scroll';
+import { Routes, Route } from 'react-router-dom';
+
 
 import './App.css';
 
@@ -9,6 +11,7 @@ import Projects from './components/Projects/Projects';
 import Intro from './components/Intro/Intro';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+
 
 function App() {
   return (

@@ -3,22 +3,22 @@
     height: 50vh;
     margin: 25vh 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .intro-tab{
     height: 100%;
     object-fit: contain;
-    margin: 0 2rem;
+    opacity: 0;
 }
 
 .intro-container{
+    opacity: 0;
     width: 20vw;
-    margin: 0 2rem;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-around   ;
 }
 
 .intro-title{
