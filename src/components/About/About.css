@@ -1,0 +1,133 @@
+/* head */
+.about{
+    width: 100%;
+}
+
+.about-head{
+    padding: 6em;
+    padding-top: 35vh;
+    padding-bottom: auto;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100%;
+}
+
+.about-head-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 15em;
+    margin: 0 5em;
+}
+
+.about-head-img{
+    width: 15em;
+    height: 15em;
+}
+
+.about-head-body-container{
+    height: 20em;
+    line-height: 23em;
+}
+
+.about-head-body{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5em;
+}
+
+.about-head-body > b{
+    color: var(--clr-highlight1);
+}
+
+@media screen and (max-width: 768px) {
+    .about-head{
+        flex-direction: column;
+    }
+    
+}
+
+/* skills */
+
+.about-skills{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    margin-top: 10vh;
+}
+
+.about-skills-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25em;
+    pointer-events: none;
+}
+
+.about-skills-list{
+    width: 100%;
+    position: relative;
+}
+
+.about-skills-skill{
+    position: absolute;
+    background-color: var(--clr-highlight1);
+    width: 12em;
+    height: 8em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.about-skills-lang{
+    left: 20vw;
+    top: 15em;
+}
+
+.about-skills-web{
+    right: 8vw;
+    top: 5em;
+}
+
+.about-skills-game{
+    right: 18vw;
+    top: 30em;
+}
+
+.about-skills-software{
+    left: 8vw;
+    top: 35em;
+}
+
+/* edu section */
+.about-edu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10vh;
+    height: 100vh;
+}
+
+.about-edu-tab{
+    position: relative;
+}
+
+.about-edu-img{
+    width: 45em;
+}
+
+.about-edu-title{
+    position: absolute;
+    top: 3em;
+    left: 1em;
+}
+
+.about-edu-body{
+    position: absolute;
+    top: 10em;
+    left: 2em;
+}

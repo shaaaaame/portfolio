@@ -1,11 +1,11 @@
 import { React, useEffect, useState, useRef} from 'react';
+import { Parallax } from 'react-scroll-parallax';
 import tab_horizontal from '../../assets/tab-horizontal.png';
 import tab_vertical from '../../assets/tab-vertical.png';
 import placeholder from '../../assets/placeholder.png';
 import  {useIsVisible } from 'react-is-visible';
 import classNames from 'classnames';
 import './Projects.css';
-
 
 
 
@@ -19,20 +19,24 @@ function ProjectRight(props){
     )
 
     var bodyClass = classNames(
-        'project-body project-body-right',
+        'project-body-right project-body',
         {'fade-fromRight' : isVisible}
     )
 
     return(
         <div className='project' ref={ref}>
-            <img className={imgClass} src={props.src} alt="project image"/>
-            <div className={bodyClass}>
-                <h3 className='project-body-title'>project</h3>
-                <img className="project-body-tab" src={tab_horizontal} alt="tab"/>
-                <div className='project-body-container'>
-                    <p className='project-body-text'>{props.text}</p>
+            <Parallax speed={-7} easing='easeInOut' className='project-back'>
+                <img className={imgClass} src={props.src} alt="project image"/>
+            </Parallax>
+            <Parallax speed={7} easing='easeInOut' className='project-front'>
+                <div className={bodyClass}>
+                    <h3 className='project-body-title'>project</h3>
+                    <img className="project-body-tab" src={tab_horizontal} alt="tab"/>
+                    <div className='project-body-container'>
+                        <p className='project-body-text'>{props.text}</p>
+                    </div>
                 </div>
-            </div>
+            </Parallax>
         </div>
     )
 }
@@ -52,14 +56,18 @@ function ProjectLeft(props){
 
     return(
         <div className='project' ref={ref}>
-            <img className={imgClass} src={props.src} alt="project image"/>
-            <div className={bodyClass}>
-                <h3 className='project-body-title'>project</h3>
-                <img className="project-body-tab" src={tab_horizontal} alt="tab"/>
-                <div className='project-body-container'>
-                    <p className='project-body-text'>{props.text}</p>
+            <Parallax speed={7} easing='easeInOut' className='project-front'>
+                <div className={bodyClass}>
+                    <h3 className='project-body-title'>project</h3>
+                    <img className="project-body-tab" src={tab_horizontal} alt="tab"/>
+                    <div className='project-body-container'>
+                        <p className='project-body-text'>{props.text}</p>
+                    </div>
                 </div>
-            </div>
+            </Parallax>
+            <Parallax speed={-7} easing='easeInOut' className='project-back'>
+                <img className={imgClass} src={props.src} alt="project image"/>
+            </Parallax>
         </div>
     )
 }

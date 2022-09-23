@@ -5,17 +5,17 @@
 
 .fade-slideUp{
   opacity: 0%;
-  animation: 1s ease-out 0.5s fade-slideUp forwards;
+  animation: 0.3s ease-out 0.3s fade-slideUp forwards;
 }
 
 .fade-fromLeft{
   opacity: 0%;
-  animation: 1s ease-out 0.5s fade-fromLeft forwards;
+  animation: 0.3s ease-out 0.3s fade-fromLeft forwards;
 }
 
 .fade-fromRight{
   opacity: 0%;
-  animation: 1s ease-out 0.5s fade-fromRight forwards;
+  animation: 0.3s ease-out 0.3s fade-fromRight forwards;
 }
 
 /* animations */

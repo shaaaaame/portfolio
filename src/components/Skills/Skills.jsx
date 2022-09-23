@@ -1,4 +1,5 @@
 import React from 'react';
+import { Parallax } from 'react-scroll-parallax';
 import './Skills.css';
 
 function Skills() {
@@ -13,11 +14,13 @@ function Skills() {
   const images = importAll(require.context('../../assets/skills/', false, /\.svg$/));
 
   return (
-    <div className='skills'>
-        <ul className='skills-container'>
-            <>{images}</>
-        </ul>
-    </div>
+    <Parallax speed={-1}>
+      <div className='skills'>
+          <ul className='skills-container'>
+              <>{images}</>
+          </ul>
+      </div>
+    </Parallax>
   )
 }
 

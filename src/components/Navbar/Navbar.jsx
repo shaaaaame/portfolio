@@ -12,11 +12,12 @@ function Navbar() {
 
   return (
     <nav className='nav'>
-        <a href="#" className='nav-name'>hanxhengchew</a>
+        <NavLink className='nav-name' to='/'>hanxhengchew</NavLink>
         <ul className='nav-list'>
-            <li className='nav-item'><NavLink to='/About'>about</NavLink></li>{/* add add href */}
-            <li className='nav-item'><Link to='projects' smooth={true} duration={1000}>projects</Link></li>
-            <li className='nav-item'><Link to='contact' smooth={true} duration={1000}>contact</Link></li>{/* add add href */}
+          <li className='nav-item'><NavLink to='/'>home</NavLink></li>
+          <li className='nav-item'><NavLink to='/About'>about</NavLink></li>
+          <li className='nav-item'><Link to='projects' smooth={true} duration={1000}>projects</Link></li>
+          <li className='nav-item'><Link to='contact' smooth={true} duration={1000}>contact</Link></li>
         </ul>
         <div className='nav-menu'>
           <img onClick={() => setIsMenubarActive(true)} className='nav-menu-icon' src={menuIcon} alt='menu'/>

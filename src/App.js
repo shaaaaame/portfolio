@@ -1,6 +1,4 @@
 import { Element} from 'react-scroll';
-import { Routes, Route } from 'react-router-dom';
-
 
 import './App.css';
 
@@ -24,6 +22,7 @@ function App() {
       <Element name='contact'><Contact /></Element>
       <Footer/>
     </div>
+
   );
 }
 
