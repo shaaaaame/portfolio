@@ -39,25 +39,25 @@
 
 .fade1{
     opacity: 0%;
-    animation: 1s ease-out 0.5s fade-fromLeft forwards;
+    animation: 0.5s ease-out 0.5s fade-fromLeft forwards;
 }
 
 .fade2{
     opacity: 0%;
-    animation: 1s ease-out 0.65s fade-fromLeft forwards;
+    animation: 0.5s ease-out 0.65s fade-fromLeft forwards;
 }
 
 .fade3{
     opacity: 0%;
-    animation: 1s ease-out 0.8s fade-fromLeft forwards;
+    animation: 0.5s ease-out 0.8s fade-fromLeft forwards;
 }
 
 .fade4{
     opacity: 0%;
-    animation: 1s ease-out 0.95s fade-fromLeft forwards;
+    animation: 0.5s ease-out 0.95s fade-fromLeft forwards;
 }
 
 .extend{
     width: 0%;
-    animation: 1.5s ease-in-out 0.7s extend forwards, 1.5s ease-in-out 0.7s fade-fromLeft forwards;
+    animation: 0.5s ease-in-out 0.7s extend forwards, 0.5s ease-in-out 0.7s fade-fromLeft forwards;
 }

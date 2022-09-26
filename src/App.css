@@ -98,3 +98,95 @@ img{
 ::-webkit-scrollbar-thumb {
   background: var(--clr-highlight2);
 }
+
+/* animations */
+
+.fade-slideUp{
+  opacity: 0%;
+  animation: 0.3s ease-out 0.3s fade-slideUp forwards;
+}
+
+.fade-slideDown{
+  opacity: 0%;
+  animation: 0.3s ease-out 0.3s fade-slideDown forwards;
+}
+
+.fade-fromLeft{
+  opacity: 0%;
+  animation: 0.3s ease-out 0.3s fade-fromLeft forwards;
+}
+
+.fade-fromRight{
+  opacity: 0%;
+  animation: 0.3s ease-out 0.3s fade-fromRight forwards;
+}
+
+/* keyframes */
+
+@keyframes fade-slideUp{
+  0% {
+      opacity: 0%;
+      transform: translateY(30px);
+  }
+
+  100%{
+      opacity: 100%;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fade-slideDown{
+  0% {
+      opacity: 0%;
+      transform: translateY(-30px);
+  }
+
+  100%{
+      opacity: 100%;
+      transform: translateY(0px);
+  }
+}
+
+@keyframes fade-fromLeft {
+  0%{
+    opacity: 0%;
+    transform: translateX(-50px);
+  }
+
+  100%{
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-fromRight {
+  0%{
+    opacity: 0%;
+    transform: translateX(50px);
+  }
+
+  100%{
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes extend{
+  0%{
+    width: 0%;
+  }
+
+  100%{
+    width: 100%;
+  }
+}
+
+@keyframes slideUp {
+  0%{
+    top: 100vh;
+  }
+
+  100%{
+    top: 0;
+  }
+}

@@ -19,11 +19,15 @@
     justify-content: space-evenly;
     height: 15em;
     margin: 0 5em;
+    opacity: 0%;
+    animation: 1s ease-out 0.6s 1 fade-fromRight forwards;
 }
 
 .about-head-img{
     width: 15em;
     height: 15em;
+    opacity: 0%;
+    animation: 1s ease-out 0.6s 1 fade-fromLeft forwards;
 }
 
 .about-head-body-container{
