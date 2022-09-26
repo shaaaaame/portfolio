@@ -1,7 +1,6 @@
 import './Navbar.css';
 import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-scroll';
 import menuIcon from '../../assets/menu.svg';
 import closeIcon from '../../assets/close.svg';
 import { CSSTransition } from 'react-transition-group';

@@ -7,6 +7,7 @@ import dog from '../../../assets/dog.png';
 import dog_bark from '../../../assets/dog-bark.png';
 import dog_hover from '../../../assets/dog-hover.gif';
 import './Hero.css';
+import { NavLink } from 'react-router-dom';
 
 function Hero() {
 
@@ -23,8 +24,8 @@ function Hero() {
       <div className='hero'>
         <img onClick={OnClick} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)} src={isClicked ? dog_bark : (isHovering ? dog_hover : dog)} className='hero-dog' alt="dog" />
         <h1 className='hero-title'>hey, i'm <b className='hero-title-name'>han xheng</b></h1>
-        <h3 className='hero-link'><b><Link to='projects' smooth={true} duration={1000}>view my works -{'>'}</Link></b></h3>
-        <h3 className='hero-link'><b><Link to='contact' smooth={true} duration={1000}>contact -{'>'}</Link></b></h3>
+        <h3 className='hero-link'><b><NavLink to='/projects'>view my works -{'>'}</NavLink></b></h3>
+        <h3 className='hero-link'><b><NavLink to='/contact'>contact -{'>'}</NavLink></b></h3>
       </div>
     </Parallax>
   )

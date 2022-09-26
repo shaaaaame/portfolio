@@ -24,7 +24,7 @@ function About() {
   function AboutSkills(){
     return(
       <div className='about-skills'>
-        <Parallax speed={30}>
+        <Parallax speed={20}>
           <ul className='about-skills-list'>
             <li className='about-skills-skill about-skills-lang'>python<br/>java<br/>c++<br/></li>
             <li className='about-skills-skill about-skills-web'>javascript<br/>html {'&'} css<br/>reactjs<br/></li>
