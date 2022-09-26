@@ -4,7 +4,7 @@
 }
 
 .about-head{
-    padding: 6em;
+    padding: 6em!important;
     padding-top: 35vh;
     padding-bottom: auto;
     display: flex;
