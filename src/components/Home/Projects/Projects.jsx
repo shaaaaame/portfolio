@@ -1,8 +1,8 @@
 import { React, useEffect, useState, useRef} from 'react';
 import { Parallax } from 'react-scroll-parallax';
-import tab_horizontal from '../../assets/tab-horizontal.png';
-import tab_vertical from '../../assets/tab-vertical.png';
-import placeholder from '../../assets/placeholder.png';
+import tab_horizontal from '../../../assets/tab-horizontal.png';
+import tab_vertical from '../../../assets/tab-vertical.png';
+import placeholder from '../../../assets/placeholder.png';
 import  {useIsVisible } from 'react-is-visible';
 import classNames from 'classnames';
 import './Projects.css';

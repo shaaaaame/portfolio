@@ -11,7 +11,7 @@ function Skills() {
     return images;
   }
   
-  const images = importAll(require.context('../../assets/skills/', false, /\.svg$/));
+  const images = importAll(require.context('../../../assets/skills/', false, /\.svg$/));
 
   return (
     <Parallax speed={-1}>

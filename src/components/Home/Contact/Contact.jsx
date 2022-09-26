@@ -3,8 +3,8 @@ import { useIsVisible } from 'react-is-visible';
 import classNames from 'classnames';
 import './Contact.css';
 
-import github from '../../assets/github.svg';
-import linkedIn from '../../assets/linkedin.svg';
+import github from '../../../assets/github.svg';
+import linkedIn from '../../../assets/linkedin.svg';
 
 
 

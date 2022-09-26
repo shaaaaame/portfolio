@@ -1,7 +1,6 @@
 import React from 'react';
+import {motion} from 'framer-motion';
 
-import Footer from '../Footer/Footer';
-import Navbar from '../Navbar/Navbar';
 import './About.css';
 import aboutTab from '../../assets/tab-about.svg';
 import meHead from '../../assets/me/about-head.jpg';
@@ -59,15 +58,16 @@ function About() {
   }
 
   return (
-    <>
-      <Navbar />
-      <div className='about'>
-        <AboutHead />
-        <AboutSkills />
-        <AboutEdu />
-      </div>
-      <Footer />
-    </>
+    <motion.div className='about'
+    
+      inital={{opacity:0}}
+      animate={{opacity:1}}
+      exit={{opacity:0}}
+    >
+      <AboutHead />
+      <AboutSkills />
+      <AboutEdu />
+    </motion.div>
   )
 }
 

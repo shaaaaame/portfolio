@@ -1,77 +1,100 @@
-.app{
-  height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;800&display=swap');
+
+:root{
+  --ff-main: "Source Code Pro", monospace;
+
+  --fs-body: 20px;
+  --fs-title: 60px;
+  --fs-h2: 40px;
+  --fs-h3: 20px;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --clr-dark: #6f4367;
+  --clr-light: #f8e9e5;
+  --clr-highlight1: #e76d8a;
+  --clr-highlight2: #a69aca;
+}
+
+@media screen and (max-width: 480px) {
+  :root{
+    --fs-body: 15px;
+    --fs-title: 30px;
+    --fs-h2: 23px;
+    --fs-h3: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  :root{
+    --fs-body: 15px;
+    --fs-title: 35px;
+    --fs-h2: 25px;
+    --fs-h3: 18px;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: var(--fs-body);
+  caret-color: transparent;
+}
+
+body{
+  overflow: overlay;
+}
+
+p{
+  font-size: var(--fs-body);
+}
+
+h1{
+  font-size: var(--fs-title);
+}
+
+h2{
+  font-size: var(--fs-h2);
+}
+
+h3{
+  font-size: var(--fs-h3);
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+body{
+  font-family: var(--ff-main);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-body);
+  color: var(--clr-dark);
   background-color: var(--clr-light);
+  z-index: 1;
 }
 
-.fade-slideUp{
-  opacity: 0%;
-  animation: 0.3s ease-out 0.3s fade-slideUp forwards;
+ul{
+  text-decoration: none;
+  list-style-type: none;
 }
 
-.fade-fromLeft{
-  opacity: 0%;
-  animation: 0.3s ease-out 0.3s fade-fromLeft forwards;
+img{
+  -webkit-tap-highlight-color: transparent;
 }
 
-.fade-fromRight{
-  opacity: 0%;
-  animation: 0.3s ease-out 0.3s fade-fromRight forwards;
+/* scrollbar style */
+
+::-webkit-scrollbar {
+  width: 3px;
 }
 
-/* animations */
-
-@keyframes fade-slideUp{
-  0% {
-      opacity: 0%;
-      transform: translateY(30px);
-  }
-
-  100%{
-      opacity: 100%;
-      transform: translateY(0);
-  }
-}
-
-@keyframes fade-fromLeft {
-  0%{
-    opacity: 0%;
-    transform: translateX(-50px);
-  }
-
-  100%{
-    opacity: 100%;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fade-fromRight {
-  0%{
-    opacity: 0%;
-    transform: translateX(50px);
-  }
-
-  100%{
-    opacity: 100%;
-    transform: translateX(0);
-  }
-}
-
-@keyframes extend{
-  0%{
-    width: 0%;
-  }
-
-  100%{
-    width: 100%;
-  }
-}
-
-@keyframes slideUp {
-  0%{
-    top: 100vh;
-  }
-
-  100%{
-    top: 0;
-  }
+::-webkit-scrollbar-thumb {
+  background: var(--clr-highlight2);
 }

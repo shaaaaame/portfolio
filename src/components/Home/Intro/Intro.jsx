@@ -1,6 +1,6 @@
 import { useRef, React } from 'react';
 
-import intro from '../../assets/intro_tab.png';
+import intro from '../../../assets/intro_tab.png';
 import { useIsVisible } from 'react-is-visible';
 import classNames from 'classnames';
 
@@ -27,7 +27,7 @@ function Intro() {
             <p className='intro-body'>i’m han xheng from malaysia, currently studying computer science and economics at the university of toronto, canada.</p>
             <div className='intro-links'>
               <h3 className='intro-link'><b><a href="#">see more about me -{'>'}</a></b></h3> {/* add href */}
-              <h3 className='intro-link'><b><a href="#">download cv -{'>'}</a></b></h3> {/* add href */}
+              <h3 className='intro-link'><b><a href="#">resume pdf -{'>'}</a></b></h3> {/* add href */}
             </div>
         </div>
     </div>

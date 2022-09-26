@@ -15,7 +15,7 @@ function Navbar() {
         <NavLink className='nav-name' to='/'>hanxhengchew</NavLink>
         <ul className='nav-list'>
           <li className='nav-item'><NavLink to='/'>home</NavLink></li>
-          <li className='nav-item'><NavLink to='/About'>about</NavLink></li>
+          <li className='nav-item'><NavLink to='/about'>about</NavLink></li>
           <li className='nav-item'><Link to='projects' smooth={true} duration={1000}>projects</Link></li>
           <li className='nav-item'><Link to='contact' smooth={true} duration={1000}>contact</Link></li>
         </ul>
@@ -31,7 +31,7 @@ function Navbar() {
             <div className='nav-menubar'>
                 <img onClick={() => setIsMenubarActive(false)} className='nav-menubar-close' src={closeIcon} alt='close'/>
                 <ul className='nav-menubar-list'>
-                  <li className='nav-menubar-item' onClick={() => setIsMenubarActive(false)}><h2><NavLink to='/About'>about</NavLink></h2></li>{/* add add href */}
+                  <li className='nav-menubar-item' onClick={() => setIsMenubarActive(false)}><h2><NavLink to='/about'>about</NavLink></h2></li>{/* add add href */}
                   <li className='nav-menubar-item'><h2><Link to='projects' smooth={true} duration={1000} onClick={() => setIsMenubarActive(false)}>projects</Link></h2></li>
                   <li className='nav-menubar-item'><h2><Link to='contact' smooth={true} duration={1000} onClick={() => setIsMenubarActive(false)}>contact</Link></h2></li>
                 </ul>

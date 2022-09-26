@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { Link, Element as scroll} from 'react-scroll'
 import { Parallax } from 'react-scroll-parallax';
 
-import dog from '../../assets/dog.png';
-import dog_bark from '../../assets/dog-bark.png';
-import dog_hover from '../../assets/dog-hover.gif';
+import dog from '../../../assets/dog.png';
+import dog_bark from '../../../assets/dog-bark.png';
+import dog_hover from '../../../assets/dog-hover.gif';
 import './Hero.css';
 
 function Hero() {
