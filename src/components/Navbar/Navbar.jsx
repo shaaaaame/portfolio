@@ -31,9 +31,10 @@ function Navbar() {
             <div className='nav-menubar'>
                 <img onClick={() => setIsMenubarActive(false)} className='nav-menubar-close' src={closeIcon} alt='close'/>
                 <ul className='nav-menubar-list'>
+                  <li className='nav-menubar-item' onClick={() => setIsMenubarActive(false)}><h2><NavLink to='/'>home</NavLink></h2></li>
                   <li className='nav-menubar-item' onClick={() => setIsMenubarActive(false)}><h2><NavLink to='/about'>about</NavLink></h2></li>
-                  <li className='nav-menubar-item'><h2><Link to='projects' smooth={true} duration={1000} onClick={() => setIsMenubarActive(false)}>projects</Link></h2></li>
-                  <li className='nav-menubar-item'><h2><Link to='contact' smooth={true} duration={1000} onClick={() => setIsMenubarActive(false)}>contact</Link></h2></li>
+                  <li className='nav-menubar-item' onClick={() => setIsMenubarActive(false)}><h2><NavLink to='/projects'>projects</NavLink></h2></li>
+                  <li className='nav-menubar-item' onClick={() => setIsMenubarActive(false)}><h2><NavLink to='/contact'>contact</NavLink></h2></li>
                 </ul>
             </div>
           </CSSTransition>
