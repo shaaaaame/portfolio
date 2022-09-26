@@ -46,11 +46,9 @@ function About() {
           <h2 className='about-edu-title'>education</h2>
           <p className='about-edu-body'>
             <b>university of toronto - class of 2026 </b><br/>
-            {'('}intended{')'} double major in computer science and economics<br/>
+            computer science and economics<br/><br/>
             <b>garden international school - class of 2022</b><br/>
             a-levels: 4A*<br/>
-            <b>help international school</b><br/>
-            igcse: 9A* 1A<br/>
           </p>
         </div>
       </div>
