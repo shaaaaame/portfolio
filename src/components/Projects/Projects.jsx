@@ -1,8 +1,9 @@
 import { React, useEffect, useState, useRef} from 'react';
+import { motion } from 'framer-motion';
 import { Parallax } from 'react-scroll-parallax';
-import tab_horizontal from '../../../assets/tab-horizontal.png';
-import tab_vertical from '../../../assets/tab-vertical.png';
-import placeholder from '../../../assets/placeholder.png';
+import tab_horizontal from '../../assets/tab-horizontal.png';
+import tab_vertical from '../../assets/tab-vertical.png';
+import placeholder from '../../assets/placeholder.png';
 import  {useIsVisible } from 'react-is-visible';
 import classNames from 'classnames';
 import './Projects.css';
@@ -116,7 +117,12 @@ function Projects() {
     useEffect(() => {getWidth()});
 
     return (
-        <>
+        <motion.div 
+        
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        exit={{opacity:0}}
+        >
             {isMobile ? 
             <div className='projects'>
                 <ProjectVertical src={placeholder} title="project1" text="no projects yet..."/>
@@ -130,7 +136,7 @@ function Projects() {
                 <ProjectRight src={placeholder} text="no projects yet..."/>
             </div>        
             }
-        </>   
+        </motion.div>   
     )
 }
 

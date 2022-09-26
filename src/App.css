@@ -103,22 +103,22 @@ img{
 
 .fade-slideUp{
   opacity: 0%;
-  animation: 0.3s ease-out 0.3s fade-slideUp forwards;
+  animation: 0.6s ease-out 0.3s fade-slideUp forwards;
 }
 
 .fade-slideDown{
   opacity: 0%;
-  animation: 0.3s ease-out 0.3s fade-slideDown forwards;
+  animation: 0.6s ease-out 0.3s fade-slideDown forwards;
 }
 
 .fade-fromLeft{
   opacity: 0%;
-  animation: 0.3s ease-out 0.3s fade-fromLeft forwards;
+  animation: 0.6s ease-out 0.3s fade-fromLeft forwards;
 }
 
 .fade-fromRight{
   opacity: 0%;
-  animation: 0.3s ease-out 0.3s fade-fromRight forwards;
+  animation: 0.6s ease-out 0.3s fade-fromRight forwards;
 }
 
 /* keyframes */

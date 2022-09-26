@@ -1,10 +1,11 @@
 import {useRef, React} from 'react';
 import { useIsVisible } from 'react-is-visible';
+import { motion } from 'framer-motion';
 import classNames from 'classnames';
 import './Contact.css';
 
-import github from '../../../assets/github.svg';
-import linkedIn from '../../../assets/linkedin.svg';
+import github from '../../assets/github.svg';
+import linkedIn from '../../assets/linkedin.svg';
 
 
 
@@ -18,9 +19,14 @@ function Contact() {
   const extend = classNames('contact-divider', {'extend' : isVisible})
 
   return (
-    <div className='contact' >
+    <motion.div className='contact' 
+    
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    >
         <h3 className={anim1} ref={ref}>let's work together :{")"}</h3>
-        <a href=""><h2 className={anim2}>hanxheng@gmail.com</h2></a>
+        <a href="mailto:hanxheng@gmail.com"><h2 className={anim2}>hanxheng@gmail.com</h2></a>
         <div className={extend}></div>
         <div className={anim3}>
             <img className='contact-logo' src={linkedIn} alt="linkedin"/>
@@ -31,7 +37,7 @@ function Contact() {
             <h3 className='contact-link'><b><a href="https://github.com/shaaaaame">shaaaaame</a></b></h3>
         </div>
 
-    </div>
+    </motion.div>
   )
 }
 

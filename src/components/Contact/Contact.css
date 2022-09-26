@@ -1,5 +1,7 @@
 .contact{
     padding: 5vw;
+    padding-top: 25vh;
+    padding-bottom: 5vh;
     width: 100%;
 }
 
@@ -9,7 +11,7 @@
 }
 
 .contact-email{
-    margin: 5rem 0;
+    margin: 10vh 0;
     color: var(--clr-highlight2);
     opacity: 0%;
 }
@@ -18,6 +20,7 @@
     width: 100%;
     height: 10px;
     background-color: var(--clr-dark);
+    opacity: 0;
 }
 
 .contact-container{
@@ -39,25 +42,25 @@
 
 .fade1{
     opacity: 0%;
-    animation: 0.5s ease-out 0.5s fade-fromLeft forwards;
+    animation: 0.6s ease-out 0.5s fade-fromLeft forwards;
 }
 
 .fade2{
     opacity: 0%;
-    animation: 0.5s ease-out 0.65s fade-fromLeft forwards;
+    animation: 0.6s ease-out 0.65s fade-fromLeft forwards;
 }
 
 .fade3{
     opacity: 0%;
-    animation: 0.5s ease-out 0.8s fade-fromLeft forwards;
+    animation: 0.6s ease-out 0.8s fade-fromLeft forwards;
 }
 
 .fade4{
     opacity: 0%;
-    animation: 0.5s ease-out 0.95s fade-fromLeft forwards;
+    animation: 0.6s ease-out 0.95s fade-fromLeft forwards;
 }
 
 .extend{
     width: 0%;
-    animation: 0.5s ease-in-out 0.7s extend forwards, 0.5s ease-in-out 0.7s fade-fromLeft forwards;
+    animation: 0.6s ease-in-out 0.7s extend forwards, 0.5s ease-in-out 0.7s fade-fromLeft forwards;
 }
