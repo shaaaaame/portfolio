@@ -28,7 +28,7 @@ function Intro() {
             <p className='intro-body'>i’m han xheng from malaysia, currently studying computer science and economics at the university of toronto, canada.</p>
             <div className='intro-links'>
               <h3 className='intro-link'><b><NavLink to="/about">see more about me -{'>'}</NavLink></b></h3>
-              {'<h3 className='intro-link'><b><a href={resume}>resume pdf -{'>'}</a></b></h3>'}
+              {//<h3 className='intro-link'><b><a href={resume}>resume pdf -{'>'}</a></b></h3>}
             </div>
         </div>
     </div>
