@@ -10,6 +10,8 @@ import placeholder from '../../assets/placeholder.png';
 import dogOrCat from '../../assets/projects/dogOrCat.png';
 import untitled from '../../assets/projects/untitled.gif';
 import portfolio from '../../assets/projects/portfolio.png';
+import physsim from '../../assets/projects/physsim.png';
+import supportMe from '../../assets/projects/supportMe.png';
 
 
 
@@ -120,7 +122,7 @@ function Projects() {
               document.documentElement.offsetWidth,
               document.documentElement.clientWidth
          );
-         if(maxWidth <= 768){
+         if(maxWidth <= 960){
              setIsMobile(true);
          }else
          {
@@ -133,9 +135,14 @@ function Projects() {
     useEffect(() => {getWidth()});
 
     // actual project data
-    const proj1 = new ProjectClass("Untitled", "2.5D pixel platformer game that follows a lost girl and her animal friends. Built on the Unity game engine (C#).", untitled)
-    const proj2 = new ProjectClass("Dog or Cat?", "Simple webapp that predicts if an image is a dog or a cat. Built using Flask (Python) and hosted on Heroku (RIP).", dogOrCat)
-    const proj3 = new ProjectClass("HX-Portfolio2022","This responsive porfolio! Designed on Figma and built on React (JS)", portfolio)
+    const proj1 = new ProjectClass("HX-Portfolio2022","This responsive porfolio! Designed on Figma and built on React (JS)", portfolio)
+    const proj2 = new ProjectClass("Untitled", "2.5D pixel platformer game that follows a lost girl and her animal friends. Built on the Unity game engine (C#).", untitled)
+    const proj3 = new ProjectClass("Support-me", ": a full-stack web platform for academic and mental health peer support. (built for Newhacks hackathon)", supportMe)
+    const proj4 = new ProjectClass("PhysSim", "a simulation of physics experiments such as Galperin’s Billiards and Rutherford’s Gold Foil experiment.", physsim)
+    const proj5 = new ProjectClass("Dog or Cat?", "Simple webapp that predicts if an image is a dog or a cat. Built using Flask (Python) and hosted on Heroku (RIP).", dogOrCat)
+
+    const projs = [proj1, proj2, proj3, proj4, proj5];
+    const projVert = []
 
     return (
         <motion.div 
@@ -146,15 +153,19 @@ function Projects() {
         >
             {isMobile ? 
             <div className='projects'>
-                <ProjectVertical src={placeholder} project={proj1}/>
-                <ProjectVertical src={placeholder} project={proj2}/>
-                <ProjectVertical src={placeholder} project={proj3}/>
+                <ProjectVertical project={proj1}/>
+                <ProjectVertical project={proj2}/>
+                <ProjectVertical project={proj3}/>
+                <ProjectVertical project={proj4}/>
+                <ProjectVertical project={proj5}/>
             </div>
             :
             <div className='projects'>
-                <ProjectRight src={placeholder} project={proj1}/>
-                <ProjectLeft src={placeholder} project={proj2}/>
-                <ProjectRight src={placeholder} project={proj3} />
+                <ProjectRight project={proj1}/>
+                <ProjectLeft  project={proj2}/>
+                <ProjectRight project={proj3} />
+                <ProjectLeft  project={proj4}/>
+                <ProjectRight project={proj5} />
             </div>        
             }
         </motion.div>   
