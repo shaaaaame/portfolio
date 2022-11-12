@@ -137,7 +137,7 @@ function Projects() {
     // actual project data
     const proj1 = new ProjectClass("HX-Portfolio2022","This responsive porfolio! Designed on Figma and built on React (JS)", portfolio)
     const proj2 = new ProjectClass("Untitled", "2.5D pixel platformer game that follows a lost girl and her animal friends. Built on the Unity game engine (C#).", untitled)
-    const proj3 = new ProjectClass("Support-me", ": a full-stack web platform for academic and mental health peer support. (built for Newhacks hackathon)", supportMe)
+    const proj3 = new ProjectClass("Support-me", "a full-stack web platform for academic and mental health peer support. (built for Newhacks hackathon)", supportMe)
     const proj4 = new ProjectClass("PhysSim", "a simulation of physics experiments such as Galperin’s Billiards and Rutherford’s Gold Foil experiment.", physsim)
     const proj5 = new ProjectClass("Dog or Cat?", "Simple webapp that predicts if an image is a dog or a cat. Built using Flask (Python) and hosted on Heroku (RIP).", dogOrCat)
 
